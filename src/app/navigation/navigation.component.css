@@ -1,0 +1,30 @@
+.sidenav-container {
+  height: 100%;
+}
+
+/* My css */
+
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+mat-sidenav {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 200px;
+  margin-top: 56px;
+}
+
+.vertical-fill {
+  flex: 1 1 auto;
+}
+
+.collapsed {
+  width: 64px;
+  transition: all .15s ease-in-out;
+}

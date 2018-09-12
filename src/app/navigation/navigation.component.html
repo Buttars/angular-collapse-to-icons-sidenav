@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">Test</mat-toolbar>
+<mat-sidenav-container class="sidenav-container" autosize>
+  <mat-sidenav
+    mode="side"
+    opened
+    [class.collapsed]="collapsed"
+    >
+    <mat-nav-list>
+        <a mat-list-item href="#"><mat-icon>home</mat-icon><span *ngIf="!collapsed"> Link 1</span></a>
+        <a mat-list-item href="#"><mat-icon>person</mat-icon><span *ngIf="!collapsed"> Link 2</span></a>
+        <a mat-list-item href="#"><mat-icon>device_hub</mat-icon><span *ngIf="!collapsed"> Link 3</span></a>
+    </mat-nav-list>
+    <div class="vertical-fill"></div>
+    <mat-nav-list>
+      <a (click)="toggleCollapse()" mat-list-item><mat-icon>{{ collapsed ? 'chevron_left' : 'chevron_right' }}</mat-icon></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
